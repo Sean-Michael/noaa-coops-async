@@ -1,17 +1,51 @@
 [project]
 name = "noaa-coops-async"
 version = "0.1.0"
-description = "Add your description here"
+description = "Async Python client for the NOAA CO-OPS Tides & Currents API"
 readme = "README.md"
+license = { text = "MIT" }
 authors = [
-    { name = "Sean-Michael", email = "seanm.riesterer@gmail.com" }
+    { name = "Sean-Michael Riesterer", email = "seanm.riesterer@gmail.com" }
 ]
-requires-python = ">=3.13"
-dependencies = []
+requires-python = ">=3.11"
+keywords = ["noaa", "tides", "currents", "async", "oceanography", "pydantic"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Atmospheric Science",
+]
+dependencies = [
+    "httpx>=0.27",
+    "pydantic>=2.0",
+    "pandas>=2.0",
+]
 
-[project.scripts]
-noaa-coops-async = "noaa_coops_async:main"
+[project.urls]
+Homepage = "https://github.com/Sean-Michael/noaa-coops-async"
+Repository = "https://github.com/Sean-Michael/noaa-coops-async"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+    "respx>=0.21",
+    "ruff>=0.6",
+]
 
 [build-system]
 requires = ["uv_build>=0.11.2,<0.12.0"]
 build-backend = "uv_build"
+
+[tool.ruff]
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
