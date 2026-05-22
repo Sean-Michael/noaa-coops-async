@@ -26,17 +26,17 @@ class Product(StrEnum):
 
 
 class Datum(StrEnum):
-    CRD = "CRD"
-    IGLD = "IGLD"
-    LWD = "LWD"
-    MHHW = "MHHW"
-    MHW = "MHW"
-    MTL = "MTL"
-    MSL = "MSL"
-    MLW = "MLW"
-    MLLW = "MLLW"
-    NAVD = "NAVD"
-    STND = "STND"
+    CRD = "CRD"    # Columbia River Datum
+    IGLD = "IGLD"  # International Great Lakes Datum
+    LWD = "LWD"    # Great Lakes Low Water Datum
+    MHHW = "MHHW"  # Mean Higher High Water
+    MHW = "MHW"    # Mean High Water
+    MTL = "MTL"    # Mean Tide Level
+    MSL = "MSL"    # Mean Sea Level
+    MLW = "MLW"    # Mean Low Water
+    MLLW = "MLLW"  # Mean Lower Low Water
+    NAVD = "NAVD"  # North American Vertical Datum
+    STND = "STND"  # Station Datum
 
 
 class Units(StrEnum):
